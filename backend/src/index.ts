@@ -4,6 +4,7 @@ import cors from 'cors'
 import { assistantRoutes, clientRoutes } from './routes'
 
 const app: Express = express()
+const PORT = process.env.PORT
 
 app.use(cors())
 app.use(express.json())
@@ -12,6 +13,6 @@ app.use(express.urlencoded({ extended: true }))
 app.use('/api/assistant', assistantRoutes)
 app.use('/api/client', clientRoutes)
 
-app.listen(1234, () => {
-  console.log('Listening on port 1234')
+app.listen(PORT, () => {
+  console.log(`Listening on port ${PORT}`)
 })
