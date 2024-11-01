@@ -13,11 +13,22 @@ const createAssistant = async (nome: string, email: string, telefone: string) =>
       telefone
     }
   })
-
   return newAssistente
+}
+
+const deleteAssistant = async (id: number) => {
+  try {
+    const deletedAssistente = await prisma.assistenteComercial.delete({
+      where: { id }
+    })
+    return deletedAssistente
+  } catch (error) {
+    throw error
+  }
 }
 
 export default {
   getAll,
-  createAssistant
+  createAssistant,
+  deleteAssistant
 }

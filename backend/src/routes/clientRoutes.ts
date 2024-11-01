@@ -8,5 +8,6 @@ router.get('/getAssignedClientsById/:id', clientController.getAssignedClientsByI
 router.post('/assignClients', clientController.assignClients)
 router.post('/unassignClients', clientController.unassignClients)
 router.post('/createClient', clientController.createClient)
+router.delete('/deleteClient', clientController.deleteClient)
 
 export default router

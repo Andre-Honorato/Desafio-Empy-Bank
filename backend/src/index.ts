@@ -13,5 +13,5 @@ app.use('/api/assistant', assistantRoutes)
 app.use('/api/client', clientRoutes)
 
 app.listen(1234, () => {
-  console.log('Example app listening on port 1234!')
+  console.log('Listening on port 1234')
 })
